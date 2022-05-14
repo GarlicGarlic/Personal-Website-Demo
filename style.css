@@ -1,0 +1,233 @@
+:root	{
+	--background-colour-main: #fefefe;
+	--header-colour: #060606;
+	--h1-colour: #060606;
+	--p-colour: #161616;
+	--mouse-colour: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+	--mouse-x: -90px;
+	--mouse-y: -90px;
+	--deg-x: 0deg;
+	--deg-y: 0deg;
+	--deg-x2: 0deg;
+	--deg-y2: 0deg;
+	--deg-gravity: 0deg;
+	--y-gravity: 10px;
+	--y-gravity: 10px;
+	/* --mouse-size: 23px; */
+	cursor: none;
+	--invert: "0";
+	--slow: 1px;
+	--med: 2px;
+	--fast: 3px;
+	--opacity: 0%;
+	--fresh-link-colour: ;
+	--gradient-link-colour: ;
+	--gradient-inverse-colour: ;
+	--filled-arrow-colour: invert(50%) sepia(47%) saturate(5539%) hue-rotate(2deg) brightness(102%) contrast(106%);
+	scroll-behavior: smooth;
+}
+
+a	{
+	color: var(--fresh-link-colour);
+	text-decoration: none;
+	cursor: none;
+}
+a:hover, a:focus-within, a:focus	{
+	background-image: var(--gradient-link-colour);
+	-webkit-background-clip: text;
+  color: transparent;
+	background-clip: text;
+	outline: none;
+}
+a:hover > div.arrow, 
+a:focus > div.arrow,
+a:focus-within > div.arrow	{
+	filter: var(--filled-arrow-colour);
+	outline: none;
+}
+
+input	{
+	cursor: none;
+}
+
+body	{
+	font-family: 'Varela Round';
+	background-color: var(--background-colour-main);
+}
+header	{
+	color: var(--header-colour);
+}
+h1	{
+	color: var(--h1-colour);
+}
+p	{
+	color: var(--p-colour);
+}
+.mouse {
+	pointer-events: none;
+	position: fixed;
+	display: block;
+  left: var(--mouse-x);
+	top: var(--mouse-y);
+	filter: var(--mouse-colour);
+	z-index: 5;
+}
+
+.over {
+	z-index: 10;
+	position: relative;    
+}
+
+.under {
+	position: relative;
+	z-index: 1;
+}
+
+.slow	{
+	position: absolute;
+	top: var(--slow);
+}
+.med	{
+	position: absolute;
+	top: var(--med);
+}
+.fast	{
+	position: absolute;
+	top: var(--fast);
+	opacity: 95%;
+}
+
+.fadein	{
+	width: 100%;
+	margin-top: calc(1400px - 75vw + 88vh);
+	opacity: var(--opacity);
+}
+
+.fixed	{
+  position: -webkit-sticky;
+  position: fixed;
+  top: 10px;
+	z-index: 1;
+}
+
+ul.dropMenu	{
+	visibility: hidden;
+	display: none;
+}
+li:hover > ul.dropMenu,
+li:focus > ul.dropMenu,
+li:focus-within > ul.dropMenu	{
+	animation: 
+		menu 0.15s ease 1 alternate;
+	padding-top: 5px;
+	padding-bottom: 8px;
+	visibility: visible;
+	display: inherit;
+	outline: none;
+}
+ul	{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+nav > ul > li {
+	float: left;
+	padding-left: 15px;
+}
+div.arrow > svg	{
+	width: 10px;
+	height: 10px;
+	transition: all 0.6s ease;
+}
+nav > ul > li:hover > a > div.arrow > svg,
+nav > ul > li:focus > a > div.arrow > svg,
+nav > ul > li:focus-within > a > div.arrow > svg	{
+	transform: rotate(-180deg);
+	outline: none;
+}
+div.arrow	{
+	margin-left: -2px;
+	filter: var(--mouse-colour);
+}
+
+.box	{
+	height: 80vh;
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+	background-image: var(--gradient-inverse-colour);
+	transition: all .05s ease;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 0px 80px 1px rgba(127, 127, 127, 0.65);
+}
+.box:hover,
+html:hover > body > .box	{
+	/* transform: skewX( var(--deg-x) ) skewY( var(--deg-y)) perspective(1000px); */
+	transform: perspective(2500px) rotateY(var(--deg-y)) rotateX(var(--deg-x));
+	z-index: -1;
+}
+.box > div	{
+	/* display: flexbox;
+  align-items: center; */
+	text-align: center;
+	transition: all .05s ease;
+	/* padding-top: calc(40vh - 5%); */
+}
+
+/* html:hover > body > .box > div	{
+	transform: perspective(5000px) rotateY(var(--deg-y)) rotateX(var(--deg-x));
+	z-index: 100;
+} */
+
+.gravity-body  {
+  display: flex;
+	justify-content: center;
+}
+
+.gravity  {
+  margin-top: 47vh;
+  margin-bottom: 40vh;
+  height: 8vh;
+  width: 10vw;
+  font-size: 1vw;
+  text-align: center;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	position: relative;
+}
+.gravity-mouse	{
+	transform: rotate(var(--deg-gravity)) translateX(var(--x-gravity)) translateY(var(--y-gravity));
+	/* background-color: red; */
+	margin-top: -15px;
+	margin-left: -15px;
+}
+#video	{
+	position: absolute;
+	height: 90vh;
+	margin-top: 3.8vh
+}
+
+q	{
+	text-decoration: none;
+	quotes: none;
+	color: rgb(96, 172, 96);
+}
+u	{
+	text-decoration: none;
+	color: rgb(172, 130, 96);
+}
+
+@keyframes menu	{
+	from	{
+		transform: scale(0.94) translate(0, -10px);
+		opacity: 30%;
+	}
+	to	{
+		transform: scale(1) translate(0,0);
+		opacity: 100%;
+	}
+}

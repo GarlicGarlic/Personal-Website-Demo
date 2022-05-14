@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+	<link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="./style.css"/>
+	<script src="./script.js"></script>
+</head>
+<body>
+	<input type="button" class="fixed" onclick="colourMode();" id='light' value="&#9728"/>
+	<input type="button" class="fixed" style="left:40px;" value="-" onclick="cursorSize(-3);"/>
+	<input type="button" class="fixed" style="left:66px;" value="+" onclick="cursorSize(3);"/>
+	<header class="fixed" style="left:95px;top:11px;">
+		<nav role="navigation">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="#!">Languages
+					<div style="display:inline;" class="arrow">
+					<svg style="width:10;height:10;" viewBox="0 0 350 450" id="arrow">
+						<path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/>
+					</svg>
+					</div></a>
+					<ul class="dropMenu">
+						<li><a href="/index.html">HTML</a></li>
+						<li><a href="/script.js">Javascript</a></li>
+						<li><a href="/style.css">CSS</a></li>
+					</ul>
+				</li>
+				<li><a href="#!">Other stuff
+					<div style="display:inline;" class="arrow">
+						<svg style="width:10;height:10;" viewBox="0 0 350 450" id="arrow">
+							<path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/>
+						</svg>
+						</div></a>
+					<ul class="dropMenu">
+						<li><a href="#!" onclick="window.scroll({top: 2500, left: 0, behavior: 'smooth'});">Information</a></li>
+						<li><a href="./gravity-button.html">Gravity Button</a></li>
+						<li><a href="./new-stuff.html">What's new?</a></li>
+					</ul>
+				</li>
+			</ul>
+			</nav>
+		</header>
+		<div class="mouse" id="mouse">
+		<!-- <svg style="width:23;height:23;" viewBox="0 0 24 24" id="mouse-svg"> -->
+			<svg style="width:23px;height:23px;" viewBox="0 0 24 24" id="mouse-svg">
+			<!-- <path d="M6 16.8 L3.96 12 L0 14.4 L0 0 L10.8 10.8 L6.36 10.8 L8.4 15.6Z"/> -->
+			<path d="M5.5,16.3l-1.7-4.2c0-0.1-0.1-0.1-0.1,0l-3.5,2.1c-0.1,0-0.2,0-0.2-0.1v-14C0,0,0.1,0,0.2,0l10,10.3c0.1,0.1,0,0.2-0.1,0.2
+			l-3.9,0.5c-0.1,0-0.1,0.1-0.1,0.1L8,15.3c0,0.1,0,0.1-0.1,0.1l-2.3,0.9C5.6,16.4,5.5,16.4,5.5,16.3z"/>
+		</svg>
+	</div>
+	<img class="fast over" width="20%" style="left:10%;margin-top:800px;" src="./images/five.png"/>
+	<img class="slow" width="40%" style="opacity:98%;left:57%;margin-top:200px;" src="./images/three.png"/>
+	<img class="med" width="10%" style="opacity:98%;left:33%;margin-top:400px;" src="./images/two.png"/>
+	<img class="med" width="25%" style="opacity:98%;left:3%;margin-top:150px;" src="./images/one.png"/>
+	<img class="fast over" width="40%" style="left:43%;margin-top:1100px;" src="./images/six.png"/>
+	<img class="slow" width="20%" style="opacity:98%;left:14%;margin-top:500px;" src="./images/four.png"/>
+
+	<img class="fadein" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Cosmos_bipinnatus_pink%2C_Burdwan%2C_West_Bengal%2C_India_10_01_2013.jpg/1200px-Cosmos_bipinnatus_pink%2C_Burdwan%2C_West_Bengal%2C_India_10_01_2013.jpg"/>
+	<div class="box">
+		<div>
+			<h1>Build in progress!</h1>
+			<p>This website is currently under construction. Please come back later to see more</p>
+		</div>
+	</div>
+</body>
+</html>
